@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "vuzgshqu",
+    "password": "lNONYxBeAshVv6yHUOm5kq5DKc9x5DSr",
+    "database": "vuzgshqu",
+    "host": "kesavan.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
