@@ -20,11 +20,11 @@ app.get("/autores/:id", async function(req, res) {
 });
 
 // NOVA ROTA QUE MOSTRA O LIVRO DO AUTOR
-app.get("/autores/:id/livro", async function(req, res){
+app.get("/autores/:id/livros", async function(req, res){
   let resultado = await autor.findByPk(req.params.id, { 
-      include: 'livro' 
+      include: 'livros' 
   });
-  res.json(resultado.livro);
+  res.json(resultado.livros);
 });
 
 app.post("/autores", async function(req, res) {
@@ -54,11 +54,11 @@ app.get("/livros/:id", async function(req, res) {
 });
 
 // NOVA ROTA QUE MOSTRA TODOS OS LIVROS DE UM AUTOR
-app.get("/livros/:id/autores", async function(req, res){
+app.get("/livros/:id/autor", async function(req, res){
   let resultado = await livro.findByPk(req.params.id, { 
-      include: 'autores' 
+      include: 'autor' 
   });
-  res.json(resultado.autores);
+  res.json(resultado.autor);
 });
 
 app.post("/livros", async function(req, res) {
